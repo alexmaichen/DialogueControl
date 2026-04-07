@@ -23,7 +23,7 @@ DialogueControl (DC) or AllDialogue (AD) is a lua database for in-game dialogue 
 ### history
 - 06/04: init
 
-### git usage (opening an issue)
+### git usage
 - fork the project into your own repo
 - `git clone` your fork
 - comment on whatever issue you wish to resolve (or open your own), and ask to be assigned
