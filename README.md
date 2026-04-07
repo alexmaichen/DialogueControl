@@ -24,6 +24,14 @@ DialogueControl (DC) or AllDialogue (AD) is a lua database for in-game dialogue 
 - 06/04: init
 
 ### git usage
+#### opening an issue
+- Check if the issue is already known / documented. If it is, read through (and comment on, if necessary) this already opened issue.
+- As the title, use the same conventional commits notation as for commits.
+- Describe your problem. Say what version (commit hash) you are using.
+- If this is about a bug, describe how to replicate the bug. Attaching a screenshot of the debug messages (launch the game with `/DebugDraw=true /DebugKeysEnabled=true` and press CTRL + D) would help. If this bug involves a crash, providing crash-logs would help.
+- if this is a feature request or enhancement, explain in as much detail as you can what you want to see added / changed. If you can, try to think of the parts of the code that would need to change (you would be likely questioned about these details in the comments if not). Mention if this new behavior would introduce breaking changes.
+
+#### contributing code
 - fork the project into your own repo
 - `git clone` your fork
 - comment on whatever issue you wish to resolve (or open your own), and ask to be assigned
@@ -42,10 +50,3 @@ DialogueControl (DC) or AllDialogue (AD) is a lua database for in-game dialogue 
 ```
 - separate each feature into functions. In other words, write modular code.
 - use `local` for all local functions and variables. Use `AllDialogue.` for everything else. In other words, do not do anything that could cause conflicts with the base game.
-
-### opening an issue
-- Check if the issue is already known / documented. If it is, read through (and comment on, if necessary) this already opened issue.
-- As the title, use the same conventional commits notation as for commits.
-- Describe your problem. Say what version (commit hash) you are using.
-- If this is about a bug, describe how to replicate the bug. Attaching a screenshot of the debug messages (launch the game with `/DebugDraw=true /DebugKeysEnabled=true` and press CTRL + D) would help. If this bug involves a crash, providing crash-logs would help.
-- if this is a feature request or enhancement, explain in as much detail as you can what you want to see added / changed. If you can, try to think of the parts of the code that would need to change (you would be likely questioned about these details in the comments if not). Mention if this new behavior would introduce breaking changes.
