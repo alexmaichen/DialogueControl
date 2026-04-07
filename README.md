@@ -38,7 +38,7 @@ DialogueControl (DC) or AllDialogue (AD) is a lua database for in-game dialogue 
 -- tables
 ---@type tablevariablename table<keytype, valuetype>
 -- functions (to avoid the rather verbose `---@param name type` and `---@return name type` alternative)
----@type fun(param1: type1, param2: type2, param3: type3, ...)
+---@type fun(param1: type1, param2: type2, param3: type3, ...): returntype
 ```
 - separate each feature into functions. In other words, write modular code.
 - use `local` for all local functions and variables. Use `AllDialogue.` for everything else. In other words, do not do anything that could cause conflicts with the base game.
