@@ -15,14 +15,14 @@ DialogueControl (DC) or AllDialogue (AD) is a lua database for in-game dialogue 
 ### several dialogue-files
 - sorted by character who's name is present in the ID. for example, ZagreusField, ZagreusHome, ZagreusScratch and ZagreusExtra type voicelines are all findable in a Zagreus.lua file.
 
-## TODO / known issues
+## Contributing
+### todo / known issues
 - fix: figure out a way to handle the game's inconsistent dialogue ID system, and know which variant to load for any given situation when there are variants
 - feat: integration into [RunControl](https://github.com/Hades-Speedrunning/RunControl)? [issue](https://github.com/Hades-Speedrunning/RunControl/issues/64)
 
-## History
+### history
 - 06/04: init
 
-## Contributing
 ### git usage
 - clone the project
 - comment on whatever issue you wish to resolve (or open your own), and ask to be assigned
