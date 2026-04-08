@@ -34,6 +34,7 @@ DialogueControl (DC) or AllDialogue (AD) is a lua database for in-game dialogue 
 #### contributing code
 - fork the project into your own repo
 - `git clone` your fork
+- `git submodule init` and `git submodule update` to make git properly clone ModUtil (and any other submodules that are to get added) into the current directory
 - comment on whatever issue you wish to resolve (or open your own), and ask to be assigned
 - make your changes and commit to your own fork of the project ((recommended) use [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/))
 - comment on the issue you wish to resolve to ask for your own development-branch on the project. do not push changes to main (do as I say, don't do as I do ). you will be notified when the branch is made
