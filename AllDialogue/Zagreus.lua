@@ -1,7 +1,4 @@
 AllDialogue.Voicelines["ZagreusField"] = {
-	-- compatibility
-	["ZagreusHome_2761"] = "Theseus, before you flap your ghostly gums at me again, I'd like to hear from good Asterius this time! He almost never gets a word in thanks to you.",
-
 	["0137"] = "...I'll have to go with the painful way.",
 	["0347"] = "Don't suppose I can talk you into fighting back this time?",
 	["0461"] = "Come on, Meg. Haven't we had more than enough of each other by now? Besides, don't you have someplace else to be?",
