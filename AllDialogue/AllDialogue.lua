@@ -1,10 +1,14 @@
 --[[
+Author: AlexCA (alexmaichen)
+
 All of the dialogue in Hades, in one table.
 ]]
 
 ModUtil.Mod.Register("AllDialogue")
 
 --[[
+constant after loading subtables
+
 stored as {[key] = {[id] = value, ...}, ...}
 
 for example: {["Achilles"] = {["0005"] = "Hey, lad.", ...}, ...}
@@ -12,10 +16,13 @@ for example: {["Achilles"] = {["0005"] = "Hey, lad.", ...}, ...}
 stands for "/VO/Achilles_0005"
 ]]
 ---@type table<string, table<string, string>>
----@source ./
 AllDialogue.Voicelines = {}
 
--- can use to brute force check the different variantions of key names. Not sure if I'll need it.
+--[[
+constant
+
+can use to brute force check the different variantions of key names. Not sure if I'll need it.
+]]
 ---@type table<integer, string>
 AllDialogue.Relations = {
     "",
@@ -33,7 +40,7 @@ AllDialogue.Relations = {
 }
 
 --[[
-use new dialogue table (default: whatever the game itself uses)
+use new dialogue table (default: whatever is in AllDialogue.Voicelines currently)
 ]]
 ---@type fun(dialogue: table<string, table<string, string>>): nil
 AllDialogue.Use = function(dialogue)
@@ -45,7 +52,9 @@ AllDialogue.Use = function(dialogue)
     AllDialogue.Voicelines = dialogue or AllDialogue.Voicelines
 end
 
--- works on full IDs and keys
+--[[
+works on full IDs and keys
+]]
 ---@type fun(id: string): boolean
 AllDialogue.IsVariant = function(k_id)
     local lk_id = #k_id
@@ -163,7 +172,9 @@ AllDialogue.GetContaining = function(id)
     return nil
 end
 
--- for wrapper
+--[[
+used in wrapper
+]]
 ---@type fun(base: function, screen, source, line: table<any, string>, parentLine: table<any, string>): any
 local DisplayTextLine = function(base, screen, source, line, parentLine)
     if type(line.Cue) ~= "string" or not string.find(line.Cue, "/VO/") then

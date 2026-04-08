@@ -52,3 +52,4 @@ DialogueControl (DC) or AllDialogue (AD) is a lua database for in-game dialogue 
 ```
 - separate each feature into functions. In other words, write modular code.
 - use `local` for all local functions and variables. Use `AllDialogue.` for everything else. In other words, do not do anything that could cause conflicts with the base game.
+- Globals (of your mod, so the stuff prefixed with the mod's name followed by a .) and function-names are written in CamelCase, starting with a capital letter. Locals and function parameters are in lowercase. If you are declaring a constant value, you may use UPPERCASE_SNAKE like for a C macro, but a comment saying the value remains constant can do this just as well.
