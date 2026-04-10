@@ -252,8 +252,11 @@ end
 local GetDisplayName_w = function (base, id)
     local parts = AllDialogue.FromID(id)
 
-    if AllDialogue.Textlines[parts["key"]][parts["id"] .. parts["relation"]] ~= nil then
-        return AllDialogue.Textlines[parts["key"]][parts["id"] .. parts["relation"]]
+    if AllDialogue.Textlines[parts["key"]] and AllDialogue.Textlines[parts["key"]][parts["id"] .. parts["relation"]] then
+        local res = AllDialogue.Textlines[parts["key"]][parts["id"] .. parts["relation"]]["DisplayName"]
+        if res ~= nil then
+            return res
+        end
     end
 
     return base(id)
