@@ -19,6 +19,14 @@ stands for "/VO/Achilles_0005"
 AllDialogue.Voicelines = {}
 
 --[[
+constant after loading subtables
+
+format is similar to that of AllDialogue.Voicelines (every table has a string Id and a DisplayName associated with it) except the json textline-tables sometimes have additional fields that aren't DisplayName (Speaker and Description)
+]]
+---@type table<string, table<string, table<string, string>>>
+AllDialogue.Textlines = {}
+
+--[[
 constant
 
 can use to brute force check the different variantions of key names. Not sure if I'll need it.
@@ -88,7 +96,22 @@ AllDialogue.FromID = function(k_id)
     ---@type integer | nil
     local id_start = nil
 
-    remaining = string.sub(remaining, 5) -- remove /VO/
+    --[[
+    remove textline / voiceline ID paths
+
+    TODO check what other paths exist
+    ]]
+    local paths = {
+        "/", -- always keep this first no matter what: removing "/" first makes this scaleable while keeping the filesystem-like nomenclature for additional paths to filter. not the most rebust solution but it works
+        "VO/",
+    }
+    for i, path in ipairs(paths) do
+        local strlen = string.len(path)
+        local removelen = strlen + 1
+        if string.sub(remaining, 1, strlen) == path then
+            remaining = string.sub(remaining, removelen)
+        end
+    end
 
     for i = 1, #remaining do
         local char = string.sub(remaining, i, i)
@@ -142,7 +165,7 @@ convert AllDialogue.Voicelines key, and id (a number, sometimes with a variant) 
 
 "-", "+" and "?" are custom relations to clear up key name conflicts (because several of those exist. thanks, supergiant). "-" is that it happens before the one of the same ID, "+" means it happens after, and "?" means I have genuinely no idea why it shares an ID with this other voiceline.
 ]]
----@type fun(key: string, id: string | nil, relation: "-" | "+" | "?" | "ALT" | "alt" | "_ALT" | "a" | "b" | "c" | "_A" | "_B" | nil): string
+---@type fun(key: string, id?: string, relation?: "-" | "+" | "?" | "ALT" | "alt" | "_ALT" | "a" | "b" | "c" | "_A" | "_B"): string
 AllDialogue.ToID = function(key, id, relation)
     local build = "/VO/" .. key
     if id == nil then -- the /VO/CerberusWhineSad incident
@@ -173,10 +196,10 @@ AllDialogue.GetContaining = function(id)
 end
 
 --[[
-used in wrapper
+used in wrappers
 ]]
----@type fun(base: function, screen, source, line: table<any, string>, parentLine: table<any, string>): any
-local DisplayTextLine = function(base, screen, source, line, parentLine)
+---@type fun(base: function, screen, source, line: table<any, string>, parentLine: table<any, string>): nil
+local DisplayTextLine_w = function(base, screen, source, line, parentLine)
     if type(line.Cue) ~= "string" or not string.find(line.Cue, "/VO/") then
         return base(screen, source, line, parentLine)
     end
@@ -225,4 +248,16 @@ local DisplayTextLine = function(base, screen, source, line, parentLine)
     return base(screen, source, nl, parentLine)
 end
 
-ModUtil.Path.Wrap("DisplayTextLine", DisplayTextLine, AllDialogue)
+---@type fun(base: function, id: string): string
+local GetDisplayName_w = function (base, id)
+    local parts = AllDialogue.FromID(id)
+
+    if AllDialogue.Textlines[parts["key"]][parts["id"] .. parts["relation"]] ~= nil then
+        return AllDialogue.Textlines[parts["key"]][parts["id"] .. parts["relation"]]
+    end
+
+    return base(id)
+end
+
+ModUtil.Path.Wrap("DisplayTextLine", DisplayTextLine_w, AllDialogue)
+ModUtil.Path.Wrap("GetDisplayName", GetDisplayName_w, AllDialogue)
