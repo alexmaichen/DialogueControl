@@ -1,4 +1,4 @@
-AllDialogue.Voicelines["Persephone"] = {
+AllDialogue.VoiceLines["Persephone"] = {
 	["0022"] = "What?! How dare...! Get out of here! Get out, or I shall make you!! Out with you!",
 	["0023"] = "You died! You, you died...! Those burning feet, they... sputtered out, when you were born. But... now you're standing here before me. How...?",
 	["0024"] = "Alive! Zagreus, he... even kept your name! You live, how can this be, you live? You live...! Oh, the cruel Fates! My son!",

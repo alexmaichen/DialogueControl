@@ -1,4 +1,4 @@
-AllDialogue.Voicelines["Theseus"] = {
+AllDialogue.VoiceLines["Theseus"] = {
 	["0002"] = "Hold, fiend! You'll walk not one more step toward the light of day, so long as I am here.",
 	["0003"] = "Ahh, a naked attempt to sway me from my convictions. Defend yourself, you blackguard! And may the gods show you some mercy, for I shall not!",
 	["0004"] = "So! The fiend returns to challenge us again, Asterius! Despite having experienced such a thorough thrashing by us last time!",

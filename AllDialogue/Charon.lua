@@ -1,4 +1,4 @@
-AllDialogue.Voicelines["Charon"] = {
+AllDialogue.VoiceLines["Charon"] = {
 	["0010?"] = "Haaahhhhh....",
 	["0019?"] = "Hrrrrrnnnggghh...",
 	["0038?"] = "Mmnnnrraaauuugggghhh!!",

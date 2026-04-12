@@ -1,4 +1,4 @@
-AllDialogue.Voicelines["Aphrodite"] = {
+AllDialogue.VoiceLines["Aphrodite"] = {
 	["0186"] = "Oh, come now, Artemis! I'm sure you're very capable of hiding from a common beast, but I can see you plain. Why not be honest with yourself, next time?",
 	["0188"] = "Why, I never, Lord Zeus! That sounded rather like a crass remark, from you! How shocking that the golden standard for the rest of us should have such words for me!",
 	["0052"] = "There are at least a few of us who share such interests here, isn't that so, Lord Ares? As for you, dearest, you take all the time you need!",
@@ -215,7 +215,7 @@ AllDialogue.Voicelines["Aphrodite"] = {
 	["0196"] = "Don't you refuse my good graces like that again.",
 }
 
-AllDialogue.Voicelines["Ares"] = {
+AllDialogue.VoiceLines["Ares"] = {
 	["0227"] = "Ah, my kin! I was just inquiring with Lord Dionysus here, under which circumstances are the greatest mortal feasts of all prepared? Because I have a certain hunch, regarding that...",
 	["0118"] = "It shall be exactly as you say, Lord Father. Your wishes are identical to mine.",
 	["0116"] = "I wished only to speak to you in private once again, my kin, except, you see...",
@@ -461,7 +461,7 @@ AllDialogue.Voicelines["Ares"] = {
 	["0191"] = "It is unwise to side against me in a war.",
 }
 
-AllDialogue.Voicelines["Artemis"] = {
+AllDialogue.VoiceLines["Artemis"] = {
 	["0193"] = "Yes, Zagreus, in spite of all these perfect, chiseled prospects everywhere about, yearning to marry or embarrass me, for some reason, I prefer to spend my time mostly alone or with my nymph friends in the woods!",
 	["0237"] = "You know my father and my uncle, by now, right, Zagreus? I don't know which of them is worse. Uh, I mean... superior! Superior, despite technically spending most of his time in the seas, beneath Olympus, isn't that right, Uncle?",
 	["0122"] = "Hey, uh, Zagreus! There's something I've been wondering, and don't take this the wrong way or anything, OK? Oh, no. It's her.",
@@ -694,7 +694,7 @@ AllDialogue.Voicelines["Artemis"] = {
 	["0201"] = "Don't anger me next time, won't shoot you dead, is it a deal?",
 }
 
-AllDialogue.Voicelines["Athena"] = {
+AllDialogue.VoiceLines["Athena"] = {
 	["0123"] = "I wonder, dearest Aphrodite, whether you'd be willing to repeat such things directly to my countenance?",
 	["0124"] = "I'm glad we understand each other, then. It would be most embarrassing to be caught bickering amongst ourselves in front of Zagreus.",
 
@@ -939,7 +939,7 @@ AllDialogue.Voicelines["Athena"] = {
 	["0201"] = "Are you quite serious about this, Zagreus?!",
 }
 
-AllDialogue.Voicelines["Chaos"] = {
+AllDialogue.VoiceLines["Chaos"] = {
 	["0213?"] = "...Blast you, boy... we should have never sprung from Chaos... none of this...",
 	["0293"] = "You have not yet used the waking-phrase that I imparted? Or perhaps you merely chose not to present me the result. I would quite like to see it, at some point. Remember, Son of Hades: Say to the all-seeing artifact, I see you stand your ground against the serpent's flame.",
 	["0179"] = "Out of the infinitely spanning possibilities, here before me stands the Son of Hades, bearing my all-seeing artifact, appearing in the aspect of a bearer yet unborn, who shall be known throughout the north as Beowulf. How very droll.",
@@ -1267,7 +1267,7 @@ AllDialogue.Voicelines["Chaos"] = {
 	["0334"] = "Your demises are unfortunate and yet a source of some amusement.",
 }
 
-AllDialogue.Voicelines["Demeter"] = {
+AllDialogue.VoiceLines["Demeter"] = {
 	["0141"] = "The crops shall wither and decay so long as I may please, young Zagreus. Although we do have those upon Olympus who take issue with my reasoning...",
 	["0149"] = "Why, Zagreus, my gentle Artemis here was just saying how concerned she was for your predicament! I'm sure she'd like it if we both could help you in this case.",
 	["0153"] = "Remember something for us, Zagreus. A frozen heart holds no sway over anyone at all. Isn't that right, oh Aphrodite, dear?",
@@ -1491,7 +1491,7 @@ AllDialogue.Voicelines["Demeter"] = {
 	["0233"] = "Ripe for harvest!",
 }
 
-AllDialogue.Voicelines["Dionysus"] = {
+AllDialogue.VoiceLines["Dionysus"] = {
 	["0213"] = "Eh, tells me I'm being awful loud, and to back off, all sorts of nasty stuff like that, what can you do, though, right?",
 	["0211"] = "Ah, haha, no need to flatter me like that, there, Lady Aphrodite! Beauty's almost entirely within the mind, I'm sure! And in the muscles and the jawline and the winning smile and, well, who am I to tell you, yeah?",
 	["0214"] = "You know, Zag, maybe once you get here, you could get old Ares to just lighten up a little, you know, man? Always dragging down the mood, with talk of blood, and nastiness, all sorts of stuff like that!",
@@ -1719,7 +1719,7 @@ AllDialogue.Voicelines["Dionysus"] = {
 	["0179"] = "Eugh, I feel bad all of a sudden, man, I mean, what happened, there?",
 }
 
-AllDialogue.Voicelines["Hermes"] = {
+AllDialogue.VoiceLines["Hermes"] = {
 	["0061"] = "Sorry, boss, my pop had pressing matters to attend to. But I'm here! Relaying you that message, and relaying this.",
 	["0062"] = "Here to tell you that Poseidon's on his way, boss. Sometimes he is a little slow. But you'll meet up with him again eventually!",
 	["0060"] = "Expecting someone else, there, boss? A certain half-sister of mine perchance? Well, tough break, I got here first. Want one of these, or not?",
@@ -1919,7 +1919,7 @@ AllDialogue.Voicelines["Hermes"] = {
 	["0174"] = "You know, the last time anybody offered me Ambrosia from the Underworld was never, before now! That's quite a gesture on your part. You could have just as well taken my services for granted and I'd not have minded in the least! But, thank you, Coz.",
 }
 
-AllDialogue.Voicelines["Poseidon"] = {
+AllDialogue.VoiceLines["Poseidon"] = {
 	["0131"] = "Oh, hoh! What do we have here, little Hades? Seems to me that you have company! Well, I'll just leave the two of you alone. My lips are sealed tighter than a warship hull!",
 	["0130"] = "Buh, erm, anyway, as I was saying, little Hades! Brother Zeus is king of all the gods! And the most dashing, powerful, and hey, let's face it, godliest of all!",
 	["0232"] = "As you can see by now, we are a big and clever family, little Hades! My niece Athena here being the cleverest of all. You'd never know that she was childless, the way she looks after and cares for all of us!",
@@ -2170,7 +2170,7 @@ AllDialogue.Voicelines["Poseidon"] = {
 	["0217"] = "Oh, now you want my help?!",
 }
 
-AllDialogue.Voicelines["Zeus"] = {
+AllDialogue.VoiceLines["Zeus"] = {
 	["0198"] = "Erm, thank you for the introduction, Daughter! Now, you run along, go frolic with your nymphs, or something! Leave me to assist my nephew, here. Bestow on him your faint blessing, if you must.",
 	["0126"] = "Nephew! By my divine authority, my oft-misunderstood son, Ares, now shall lend you a small token of his power. I'll make him helpful yet!",
 	["0200"] = "Young man, I know you'd like to get to know the comely Aphrodite face to face, or I don't know, you can decide once you arrive at last! He can decide, isn't that right, my Lady Aphrodite, hm?",

@@ -1,4 +1,4 @@
-AllDialogue.Voicelines["Hades"] = {
+AllDialogue.VoiceLines["Hades"] = {
 	["0002"] = "Stupid boy. I told you you'd be back. And how was your wanton ransacking of my domain?",
 	["0003"] = "To suffer such indignity, from my own kin. Such foolishness as yours I scarce can comprehend, but you, boy! You've made foolishness an art.",
 	["0007"] = "Quite an accomplishment, there, boy, now leave me be. Ten thousands souls in Tartarus today. A bloody war! And not a lot of bloody help.",
@@ -1168,7 +1168,7 @@ AllDialogue.Voicelines["Hades"] = {
 	["0939"] = "You have taken much less time adjusting to this place than when first you joined us. Part of my surprise. I, myself, was forced to be here. I never thought anyone would come from the surface here by choice.",
 }
 
-AllDialogue.Voicelines["HadesField"] = {
+AllDialogue.VoiceLines["HadesField"] = {
 	["0005"] = "You impertinent brat. Fine. Impulsiveness runs in the family.",
 	["0008"] = "We're gods, boy. Killing one another is our lot. Although, I always thought I was above it. I told you that you cannot leave this place. It seems I must enforce my rules myself. I'm sending you home, now.",
 	["0011"] = "I... how... you.... Go. Go, then. Go!! Get out of here! Get out!",

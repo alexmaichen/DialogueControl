@@ -1,4 +1,4 @@
-AllDialogue.Voicelines["Thanatos"] = {
+AllDialogue.VoiceLines["Thanatos"] = {
 	["0031?"] = "...Thought you could just get away from me, did you?",
 	["0155?"] = "...Well, how often do you consult these lists you make? If you're spending too much time just making lists, you're not leaving time to get anything done.",
 	["0166"] = "What, really...? Come on, what is this, Zagreus. You think handing this to me makes up for everything you've put us through?",
@@ -621,7 +621,7 @@ AllDialogue.Voicelines["Thanatos"] = {
 	["0568"] = "Had enough in there?",
 }
 
-AllDialogue.Voicelines["ThanatosField"] = {
+AllDialogue.VoiceLines["ThanatosField"] = {
 	["0003"] = "That's fair as an assessment, I would say. But then again, it's never been an easy time for me. I know I have to do my job. But I don't have to keep on helping you, like this.",
 	["0006"] = "And I cannot believe you still remember that. Regardless, he will not be getting lost again under your supervision, accurate?",
 	["0223"] = "Ugh, I don't know. Sometimes I miss not feeling anything. Can't always trust what feelings say. I get to thinking, are we only friends, or... look, this is embarrassing.",
@@ -859,6 +859,6 @@ AllDialogue.Voicelines["ThanatosField"] = {
 	["0245"] = "I'm gone.",
 }
 
-AllDialogue.Voicelines["ThanatosExtra"] = {
+AllDialogue.VoiceLines["ThanatosExtra"] = {
 	["0001"] = "You're certain? Well... I understand. I'd best get back to my responsibilities for now.",
 }

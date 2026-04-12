@@ -1,4 +1,4 @@
-AllDialogue.Voicelines["EurydiceSong1"] = {
+AllDialogue.VoiceLines["EurydiceSong1"] = {
 	["Eurydice_001"] = "{!Icons.Music}Farewell{!Icons.Music}",
 	["Eurydice_002"] = "{!Icons.Music}To all the earthly remains{!Icons.Music}",
 	["Eurydice_003"] = "{!Icons.Music}No burdens{!Icons.Music}",
@@ -96,7 +96,7 @@ AllDialogue.Voicelines["EurydiceSong1"] = {
 	["Duet_031"] = "{!Icons.Music}In time{!Icons.Music}",
 }
 
-AllDialogue.Voicelines["OrpheusSong1VACOUSTIC"] = {
+AllDialogue.VoiceLines["OrpheusSong1VACOUSTIC"] = {
 	["001"] = "{!Icons.Music}Hear oh gods my desperate plea{!Icons.Music}",
 	["002"] = "{!Icons.Music}To see my love beside me{!Icons.Music}",
 	["003"] = "{!Icons.Music}Sunk below the mortal sea{!Icons.Music}",
@@ -123,7 +123,7 @@ AllDialogue.Voicelines["OrpheusSong1VACOUSTIC"] = {
 	["024"] = "{!Icons.Music}Don't look back{!Icons.Music}",
 }
 
-AllDialogue.Voicelines["OrpheusSong2"] = {
+AllDialogue.VoiceLines["OrpheusSong2"] = {
 	["001"] = "{!Icons.Music}Sing of Zagreus oh muse{!Icons.Music}",
 	["002"] = "{!Icons.Music}Slayer of hydras{!Icons.Music}",
 	["003"] = "{!Icons.Music}First of his name{!Icons.Music}",
@@ -162,7 +162,7 @@ AllDialogue.Voicelines["OrpheusSong2"] = {
 	["036"] = "{!Icons.Music}Doomed to remain{!Icons.Music}",
 }
 
-AllDialogue.Voicelines["EndTheme"] = {
+AllDialogue.VoiceLines["EndTheme"] = {
 	["001"] = "{#EurydiceSoloFormat}{!Icons.Music}Fates{!Icons.Music}",
 	["002"] = "{#EurydiceSoloFormat}{!Icons.Music}Weave their threads{!Icons.Music}",
 	["003"] = "{#EurydiceSoloFormat}{!Icons.Music}Our lives are sewn{!Icons.Music}",
@@ -203,7 +203,7 @@ AllDialogue.Voicelines["EndTheme"] = {
 	["038"] = "{!Icons.Music}It's in the blood{!Icons.Music}",
 }
 
-AllDialogue.Voicelines["EndThemeACOUSTIC"] = {
+AllDialogue.VoiceLines["EndThemeACOUSTIC"] = {
 	["001"] = "{#EurydiceSoloFormat}{!Icons.Music}Fates{!Icons.Music}",
 	["002"] = "{#EurydiceSoloFormat}{!Icons.Music}Weave their threads{!Icons.Music}",
 	["003"] = "{#EurydiceSoloFormat}{!Icons.Music}Our lives are sewn{!Icons.Music}",

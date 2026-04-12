@@ -27,3 +27,10 @@ Import "Thanatos.lua"
 Import "Theseus.lua"
 Import "Tisiphone.lua"
 Import "Zagreus.lua"
+
+Import "HelpText.lua"
+Import "LaunchText.lua"
+Import "MacroText.lua"
+Import "MiscText.lua"
+
+Import "AllDialogue_2.lua"

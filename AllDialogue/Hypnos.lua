@@ -1,4 +1,4 @@
-AllDialogue.Voicelines["Hypnos"] = {
+AllDialogue.VoiceLines["Hypnos"] = {
 	["0003"] = "Oh! Hi. I'd ask you how it went, but since you're here again, I guess I know already, huh! Oh well, just come on in!",
 	["0005"] = "Oh, hi! Um, welcome home! Again! Go right ahead! I think your dad's mad about something or other, though.",
 	["0059?"] = "...I think that I can find the lounge well on my own, Hypnos. Or... wait... what is this, did you just ask me out?",

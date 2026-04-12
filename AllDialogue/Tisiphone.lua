@@ -1,4 +1,4 @@
-AllDialogue.Voicelines["Tisiphone"] = {
+AllDialogue.VoiceLines["Tisiphone"] = {
 	["0002"] = "Mmmm... mmmurderer...",
 	["0003"] = "Murderer... mmmmurderrrerrrrrrrr...!",
 	["0004"] = "Mmmmmurderrrerrrrrrrr...!",

@@ -1,4 +1,4 @@
-AllDialogue.Voicelines["Orpheus"] = {
+AllDialogue.VoiceLines["Orpheus"] = {
 	["0051"] = "Why, this is absolutely splendid, Zagreus. Is this really for me? It's so very kind of you to think of me like this.",
 	["0052"] = "Oh, I, certainly, why, I don't see why not. I mean, it's not as though I've got something to do that isn't that.",
 	["0053"] = "...And, anyways, I oughtn't have looked back, I mean, the moral of the story is to not look back when you are told not to look back, you understand, don't you, my friend?",

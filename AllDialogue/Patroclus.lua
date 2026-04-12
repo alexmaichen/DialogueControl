@@ -1,4 +1,4 @@
-AllDialogue.Voicelines["Patroclus"] = {
+AllDialogue.VoiceLines["Patroclus"] = {
 	["0004"] = "Names are there to be forgotten, stranger. You shouldn't be here. May the Fates favor your journey. But just in case they don't, here. Why don't you take this?",
 	["0105"] = "What's the use? Let's say we fought, if anybody asks, now go. I've no quarrel with you, besides. I'll just remain here, comfortably at rest, for some untold millennia, I guess. Have a nice... whatever time it is.",
 	["0106"] = "Still toiling around within Elysium, I see. Battling my brethren, in the name of glory, is that it?",

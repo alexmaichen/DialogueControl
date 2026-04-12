@@ -1,4 +1,4 @@
-AllDialogue.Voicelines["Nyx"] = {
+AllDialogue.VoiceLines["Nyx"] = {
 	["0002"] = "Darkness guide you, child. You have outgrown this House, of that I am now certain. Should you return again here, I shall keep you safe.",
 	["0003"] = "Darkness guide you, child.",
 	["0004"] = "Take care of yourself, child.",

@@ -1,4 +1,4 @@
-AllDialogue.Voicelines["MegaeraField"] = {
+AllDialogue.VoiceLines["MegaeraField"] = {
 	["0002"] = "Halt, Zagreus. Not one step further.",
 	["0003"] = "You know exactly why I'm here. Now shut your mouth, and come die like a man.",
 	["0004"] = "Your father sent me. All in all, I'd rather be on your bad side than his. Now you can turn back like a good little man, or I can send you home the painful way. What'll it be?",
@@ -783,7 +783,7 @@ AllDialogue.Voicelines["MegaeraField"] = {
 	["0788"] = "Here, Wretches!",
 }
 
-AllDialogue.Voicelines["MegaeraHome"] = {
+AllDialogue.VoiceLines["MegaeraHome"] = {
 	["0002"] = "Tsch. The prodigal son returns.... Everyone's saying I went easy on you, Zag.",
 	["0003"] = "Look, I've a reputation to uphold. You get past me again like that, you best go all the way. Now, leave me be, and don't think you're going to be so lucky next we meet out there.",
 	["0004"] = "Whatever it is, it's weak. Enough to be mistaken for your blood.",
@@ -1197,6 +1197,6 @@ AllDialogue.Voicelines["MegaeraHome"] = {
 	["0421"] = "You always do.",
 }
 
-AllDialogue.Voicelines["MegaeraExtra"] = {
+AllDialogue.VoiceLines["MegaeraExtra"] = {
 	["0001"] = "...You're sure? Look, I... it's totally all right. I'll see you out there, then.",
 }

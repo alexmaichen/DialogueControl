@@ -1,4 +1,4 @@
-AllDialogue.Voicelines["Dusa"] = {
+AllDialogue.VoiceLines["Dusa"] = {
 	["0002"] = "Oh! The Prince himself, you, want to talk to me...? Me?! Oh, wow, oh wow!!",
 	["0004"] = "I, I, I, aah, I have to clean the rafters, I...!",
 	["0017"] = "Just, ah, just doing my job, here, Prince...!",

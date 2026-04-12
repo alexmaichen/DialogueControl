@@ -7,6 +7,11 @@ All of the dialogue in Hades, in one table.
 ModUtil.Mod.Register("AllDialogue")
 
 --[[
+where the game reads dialogue and text from
+]]
+AllDialogue.InUse = {}
+
+--[[
 constant after loading subtables
 
 stored as {[key] = {[id] = value, ...}, ...}
@@ -16,15 +21,15 @@ for example: {["Achilles"] = {["0005"] = "Hey, lad.", ...}, ...}
 stands for "/VO/Achilles_0005"
 ]]
 ---@type table<string, table<string, string>>
-AllDialogue.Voicelines = {}
+AllDialogue.VoiceLines = {}
 
 --[[
 constant after loading subtables
 
-format is similar to that of AllDialogue.Voicelines (every table has a string Id and a DisplayName associated with it) except the json textline-tables sometimes have additional fields that aren't DisplayName (Speaker and Description)
+format is similar to that of AllDialogue.VoiceLines (every table has a string Id and a DisplayName associated with it) except the json textline-tables sometimes have additional fields that aren't DisplayName (Speaker and Description)
 ]]
 ---@type table<string, table<string, table<string, string>>>
-AllDialogue.Textlines = {}
+AllDialogue.TextLines = {}
 
 --[[
 constant
@@ -48,16 +53,23 @@ AllDialogue.Relations = {
 }
 
 --[[
-use new dialogue table (default: whatever is in AllDialogue.Voicelines currently)
+use new dialogue table (default: whatever is in AllDialogue.VoiceLines currently)
 ]]
----@type fun(dialogue: table<string, table<string, string>>): nil
-AllDialogue.Use = function(dialogue)
+---@type fun(dialogue?: table<string, table<string, string>>, text?: table<string, table<string, table<string, string>>>): nil
+AllDialogue.Use = function(dialogue, text)
     if type(dialogue) ~= "table" then -- checking because in the case of a badly loaded mod this table could be nil, and fail silently until the game tries to index on this nil, after which the game would crash
         DebugPrint({Text = "Used custom dialogue table is not a table. (error)"})
     end
 
     DebugPrint({Text = "Loading new dialogue."})
-    AllDialogue.Voicelines = dialogue or AllDialogue.Voicelines
+    AllDialogue.InUse["VoiceLines"] = dialogue or {}
+
+    if type(text) ~= "table" then -- checking because in the case of a badly loaded mod this table could be nil, and fail silently until the game tries to index on this nil, after which the game would crash
+        DebugPrint({Text = "Used custom text table is not a table. (error)"})
+    end
+
+    DebugPrint({Text = "Loading new dialogue."})
+    AllDialogue.InUse["TextLines"] = text or {}
 end
 
 --[[
@@ -155,13 +167,13 @@ AllDialogue.FromID = function(k_id)
 end
 
 --[[
-convert AllDialogue.Voicelines key, and id (a number, sometimes with a variant) into voiceline name format
+convert AllDialogue.VoiceLines key, and id (a number, sometimes with a variant) into voiceline name format
 
 "key" contains the main name, usually character name.
 
-"id" may contain a stringified number or nil
+"id" may contain a stringified number
 
-"relation" may contain a string or nil
+"relation" may contain a string
 
 "-", "+" and "?" are custom relations to clear up key name conflicts (because several of those exist. thanks, supergiant). "-" is that it happens before the one of the same ID, "+" means it happens after, and "?" means I have genuinely no idea why it shares an ID with this other voiceline.
 ]]
@@ -184,8 +196,8 @@ end
 -- get an index of the Voicelines table where this id exists. recommend only for debugging
 ---@type fun(id: string): string | nil
 AllDialogue.GetContaining = function(id)
-    for key, value in pairs(AllDialogue.Voicelines) do
-        local curr = AllDialogue.Voicelines[key]
+    for key, value in pairs(AllDialogue.InUse["VoiceLines"]) do
+        local curr = AllDialogue.InUse["VoiceLines"][key]
 
         if Contains(curr, id) then
             return key
@@ -201,16 +213,18 @@ used in wrappers
 ---@type fun(base: function, screen, source, line: table<any, string>, parentLine: table<any, string>): nil
 local DisplayTextLine_w = function(base, screen, source, line, parentLine)
     if type(line.Cue) ~= "string" or not string.find(line.Cue, "/VO/") then
+        DebugPrint({Text = "not a voiceline id"})
         return base(screen, source, line, parentLine)
     end
 
-    DebugPrint({Text = "Original line" .. line.Cue .. ": " .. line.Text})
+    DebugPrint({Text = "Original line " .. line.Cue .. ": " .. line.Text})
 
     local getid = AllDialogue.FromID(line.Cue)
     local key = getid["key"]
     local id = getid["id"]
     local relation = getid["relation"]
     local nl = line
+    local vlt = AllDialogue.InUse["VoiceLines"]
 
     if key == "" then
         DebugPrint({Text = "Could not find key in Cue. Using base-game dialogue for this voiceline instead. (error)"})
@@ -235,14 +249,24 @@ local DisplayTextLine_w = function(base, screen, source, line, parentLine)
         relation = ""
     end
 
-    if AllDialogue.Voicelines[key] == nil or AllDialogue.Voicelines[key][id .. relation] == nil then
-        -- revert all changes; function produced invalid voiceline id
-        DebugPrint({Text = "Cue " .. line.Cue .. " did not produce a valid key and id. Using base-game dialogue for this voiceline instead. (error)"})
+    DebugPrint({Text = "Parsed: key='" .. key .. "' id='" .. id .. "' relation='" .. relation .. "'"})
 
+    if vlt[key] == nil or vlt[key][id .. relation] == nil then
+        vlt = AllDialogue.VoiceLines
+        DebugPrint({Text = "Falling back to VoiceLines. Has key: " .. tostring(vlt[key] ~= nil)})
+    end
+
+    if vlt[key] == nil then
+        DebugPrint({Text = "Cue " .. line.Cue .. " - key '" .. key .. "' not found in voiceline tables. (error)"})
         return base(screen, source, line, parentLine)
     end
 
-    nl.Text = AllDialogue.Voicelines[key][id .. relation]
+    if vlt[key][id .. relation] == nil then
+        DebugPrint({Text = "Cue " .. line.Cue .. " - entry '" .. (id .. relation) .. "' not found under key '" .. key .. "'. (error)"})
+        return base(screen, source, line, parentLine)
+    end
+
+    nl.Text = vlt[key][id .. relation]
     DebugPrint({Text = "Successfully used new voiceline."})
 
     return base(screen, source, nl, parentLine)
@@ -252,13 +276,20 @@ end
 local GetDisplayName_w = function (base, id)
     local parts = AllDialogue.FromID(id)
 
-    if AllDialogue.Textlines[parts["key"]] and AllDialogue.Textlines[parts["key"]][parts["id"] .. parts["relation"]] then
-        local res = AllDialogue.Textlines[parts["key"]][parts["id"] .. parts["relation"]]["DisplayName"]
+    for key in {"key", "id", "relation"} do
+        parts[key] = parts[key] or "" -- nil is a problem
+    end
+
+    local tl = AllDialogue.InUse["TextLines"]
+
+    if tl[parts["key"]] and tl[parts["key"]][parts["id"] .. parts["relation"]] then
+        local res = tl[parts["key"]][parts["id"] .. parts["relation"]]["DisplayName"]
         if res ~= nil then
             return res
         end
     end
 
+    DebugPrint({Text = id .. " not found"})
     return base(id)
 end
 

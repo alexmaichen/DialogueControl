@@ -1,4 +1,4 @@
-AllDialogue.Voicelines["Intercom"] = {
+AllDialogue.VoiceLines["Intercom"] = {
 	["0041"] = "Do not so much as think about it.",
 	["0043"] = "I do not think so, boy.",
 	["0057"] = "You truly are an idiot, aren't you.",

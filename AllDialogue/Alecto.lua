@@ -1,4 +1,4 @@
-AllDialogue.Voicelines["Alecto"] = {
+AllDialogue.VoiceLines["Alecto"] = {
 	["0002"] = "Ah, hah hah, hohohohohhh. Finally. I've been waiting for this! Really.",
 	["0003"] = "...So sick of, you know, doing my regular job, uninterrupted. Not having to clean up Meg's messes!",
 	["0004"] = "Anyway. I always wanted to kill a god. You'll have to do.",

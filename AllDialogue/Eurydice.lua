@@ -1,4 +1,4 @@
-AllDialogue.Voicelines["Eurydice"] = {
+AllDialogue.VoiceLines["Eurydice"] = {
 	["0003"] = "Well don't you have your hands full, hon! I'll let you go, but there's one rule in my place, which is: Nobody leaves here empty-handed, you got that? So take your pick, my treat!",
 	["0033"] = "Hey, nice of you to visit us, Your Royal Majesty! For you!",
 	["0034"] = "Orphy and I, we're doing great here thanks to you. You take care, hon!",

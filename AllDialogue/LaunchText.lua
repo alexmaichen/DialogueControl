@@ -1,4 +1,4 @@
-AllDialogue.Textlines["Launcher"] = {
+AllDialogue.TextLines["Launcher"] = {
     ["PressAnyButton"] = {
         ["DisplayName"] = "Press Any Button"
     },

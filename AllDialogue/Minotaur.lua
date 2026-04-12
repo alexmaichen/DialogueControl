@@ -1,4 +1,4 @@
-AllDialogue.Voicelines["Minotaur"] = {
+AllDialogue.VoiceLines["Minotaur"] = {
 	["0002"] = "You come from the bowels of hell. This is not your place.",
 	["0003"] = "I will not. <Snort> The Champion of Elysium would never back down from such a contest. Neither will I.",
 	["0004"] = "I will not. <Snort> You talk too much, short one. Come get destroyed.",

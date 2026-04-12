@@ -1,4 +1,4 @@
-AllDialogue.Voicelines["Sisyphus"] = {
+AllDialogue.VoiceLines["Sisyphus"] = {
 	["0129"] = "Hey, Prince Z. Must look like I'm slacking off with the old boulder, here, but... I was just getting back on my feet. The Fury Sisters don't often leave me be. Where'd they go, anyway? And... what are you doing here?",
 	["0130"] = "Oh I'll let them know, all right, I hear you loud and clear, Your Highness. I'll just go about my business now, and you take care.",
 	["0131"] = "If I may be so bold, Your Highness, I was wondering... what brings you back around this way again? Same story as last time?",

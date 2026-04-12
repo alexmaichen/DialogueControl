@@ -1,4 +1,4 @@
-AllDialogue.Voicelines["Skelly"] = {
+AllDialogue.VoiceLines["Skelly"] = {
 	["0003"] = "You getting pretty strong, I'll give you that, boyo. Strong enough to smack a guy like me right up against the wall and I'd go straight to pieces, boom! You just remember, when you're duking it out, the walls are your friend!",
 	["0006"] = "Not a chance, boyo, I'm paid to take it not to dish it out! Now give it to me!!",
 	["0026"] = "Less yakking, more smacking, boyo, now come on!",

@@ -1,4 +1,4 @@
-AllDialogue.Voicelines["ZagreusField"] = {
+AllDialogue.VoiceLines["ZagreusField"] = {
 	["0137"] = "...I'll have to go with the painful way.",
 	["0347"] = "Don't suppose I can talk you into fighting back this time?",
 	["0461"] = "Come on, Meg. Haven't we had more than enough of each other by now? Besides, don't you have someplace else to be?",
@@ -4735,7 +4735,7 @@ AllDialogue.Voicelines["ZagreusField"] = {
 	["2066"] = "All right, boy, I got your favorite treat. But you have to promise to let me pass if I hand it over, OK?",
 }
 
-AllDialogue.Voicelines["ZagreusHome"] = {
+AllDialogue.VoiceLines["ZagreusHome"] = {
 	["0110"] = "For you, mate! Thought you might get a kick out of this.",
 	["0161"] = "You're not so bad yourself, mate. Thanks for always being here for me to savagely attack without a second thought.",
 	["0162"] = "I'm really giving this to you, mate. Now go enjoy it, will you? Once I've finished pummeling you some more just for the sake of it.",
@@ -8634,7 +8634,7 @@ AllDialogue.Voicelines["ZagreusHome"] = {
 	["2136"] = "Then why don't you?! I don't want any of this. I'm not the one who drew the short lot with your brothers and got stuck here forever!! Why am I having to do this senseless parchment-pushing for you?",
 }
 
-AllDialogue.Voicelines["ZagreusScratch"] = {
+AllDialogue.VoiceLines["ZagreusScratch"] = {
 	["0002b"] = "Shut up, old man.",
 	["0003"] = "Wait for me, Mother. I'll be there soon.",
 	["0004"] = "To hell with this place.",
@@ -8662,7 +8662,7 @@ AllDialogue.Voicelines["ZagreusScratch"] = {
 	["0015b"] = "I, uh, just wanted to say, don't bother picking up my room today. I'm headed out for a while.",
 }
 
-AllDialogue.Voicelines["ZagreusExtra"] = {
+AllDialogue.VoiceLines["ZagreusExtra"] = {
 	["0002"] = "In the name of Hades!",
 	["0003"] = "Olympus! I accept this message!",
 	["0004"] = "In the name of Hades!",

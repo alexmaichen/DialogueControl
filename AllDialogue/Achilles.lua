@@ -1,4 +1,4 @@
-AllDialogue.Voicelines["Achilles"] = {
+AllDialogue.VoiceLines["Achilles"] = {
 	["0002"] = "You'll get the hang of it out there, lad. For all our sparring practice, there's no teacher like the real thing. Now then, I have something for you.",
 	["0003"] = "Please, I insist. I want your love of history to grow, not just your love of warfare. Besides, maybe you can finish out the rest of it.",
 	["0004"] = "Keep at it, lad. I've known great men throughout my life, and I can always tell when someone's better than their circumstances. Fight like I'd fight out there.",

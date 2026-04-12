@@ -1,4 +1,4 @@
-AllDialogue.Voicelines["Storyteller"] = {
+AllDialogue.VoiceLines["Storyteller"] = {
 	["0147"] = "Cerberus promises to do exactly that, in his own way.",
 	["0148"] = "The watch-dog Cerberus merely sulks upon his supple bedroll.",
 	["0163"] = "Infernal watch-dog Cerberus regards the Underworld Prince with mixed emotions, from purest joy to deepest melancholy.",

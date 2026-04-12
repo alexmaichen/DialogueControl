@@ -1,4 +1,4 @@
-AllDialogue.Voicelines["Scratch"] = {
+AllDialogue.VoiceLines["Scratch"] = {
 	["0002"] = "Few tales are told of Hades, whose very name inspires fear and penitence, reminding us of the inevitable fate which we all share. I, however, mean to tell you such a tale. Listen carefully...",
 	["0002_A"] = "Few tales are told of Hades, whose very name inspires fear and penitence, reminding us of the inevitable fate which we all share.",
 	["0002_B"] = "I, however, mean to tell you such a tale. Listen carefully...",
