@@ -17,6 +17,7 @@ DialogueControl (DC) or AllDialogue (AD) is a lua database for in-game dialogue 
 
 ## Contributing
 ### todo / known issues
+- fix: not every voiceline is present in the tables
 - fix: figure out a way to handle the game's inconsistent dialogue ID system, and know which variant to load for any given situation when there are variants
 - feat: integration into [RunControl](https://github.com/Hades-Speedrunning/RunControl)? [issue](https://github.com/Hades-Speedrunning/RunControl/issues/64)
 - feat: also allow customization of non-dialogue text (interacting, gifting, petting, fishing, thing names, thing descriptions, thing subtexts, ...)
