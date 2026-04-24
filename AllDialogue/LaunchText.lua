@@ -1,17 +1,17 @@
 AllDialogue.TextLines["Launcher"] = {
     ["PressAnyButton"] = {
-        ["DisplayName"] = "Press Any Button"
+        ["DisplayName"] = [=[Press Any Button]=]
     },
     ["PressAnyKey"] = {
-        ["DisplayName"] = "Press Any Key"
+        ["DisplayName"] = [=[Press Any Key]=]
     },
     ["AutoSaveAlert"] = {
-        ["DisplayName"] = "AutoSave Indicator Appears When Progress Is Saved:"
+        ["DisplayName"] = [=[AutoSave Indicator Appears When Progress Is Saved:]=]
     },
     ["AutoSaveAlertAlt"] = {
-        ["DisplayName"] = "AutoSave Notice: Your progress is being saved when you see the indicator below. Please do not turn off your console at this time."
+        ["DisplayName"] = [=[AutoSave Notice: Your progress is being saved when you see the indicator below. Please do not turn off your console at this time.]=]
     },
     ["SupergiantGamesShortCopyright"] = {
-        ["DisplayName"] = "© 2018 Supergiant Games, LLC. All rights reserved."
+        ["DisplayName"] = [=[© 2018 Supergiant Games, LLC. All rights reserved.]=]
     }
 }
