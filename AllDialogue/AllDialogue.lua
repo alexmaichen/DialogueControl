@@ -272,8 +272,10 @@ local DisplayTextLine_w = function(base, screen, source, line, parentLine)
     return base(screen, source, nl, parentLine)
 end
 
----@type fun(base: function, id: string): string
-local GetDisplayName_w = function (base, id)
+---@type fun(base: function, id: table): string
+local GetDisplayName_w = function(base, id)
+
+    --[=[
     local parts = AllDialogue.FromID(id)
 
     for key in {"key", "id", "relation"} do
@@ -290,6 +292,7 @@ local GetDisplayName_w = function (base, id)
     end
 
     DebugPrint({Text = id .. " not found"})
+    ]=]
     return base(id)
 end
 
