@@ -61,14 +61,14 @@ AllDialogue.Use = function(dialogue, text)
         DebugPrint({Text = "Used custom dialogue table is not a table. (error)"})
     end
 
-    DebugPrint({Text = "Loading new dialogue."})
+    DebugPrint({Text = "Loading new dialogue. (info)"})
     AllDialogue.InUse["VoiceLines"] = dialogue or {}
 
     if type(text) ~= "table" then -- checking because in the case of a badly loaded mod this table could be nil, and fail silently until the game tries to index on this nil, after which the game would crash
         DebugPrint({Text = "Used custom text table is not a table. (error)"})
     end
 
-    DebugPrint({Text = "Loading new dialogue."})
+    DebugPrint({Text = "Loading new text. (info)"})
     AllDialogue.InUse["TextLines"] = text or {}
 end
 
@@ -97,16 +97,16 @@ the number-part of the ID serves as a sort of separator between the key and rela
 ]]
 ---@type fun(id: string): table<string, string>
 AllDialogue.FromID = function(k_id)
-    if not k_id or type(k_id) ~= "string" then
-        return {["key"] = ""}
-    end
-
     ---@type string
     local remaining = k_id
     ---@type table<string, string>
-    local result = {["key"] = ""}
+    local result = {["key"] = "", ["id"] = "", ["relation"] = ""}
     ---@type integer | nil
     local id_start = nil
+
+    if not k_id or type(k_id) ~= "string" then
+        return result
+    end
 
     --[[
     remove textline / voiceline ID paths
@@ -213,11 +213,11 @@ used in wrappers
 ---@type fun(base: function, screen, source, line: table<any, string>, parentLine: table<any, string>): nil
 local DisplayTextLine_w = function(base, screen, source, line, parentLine)
     if type(line.Cue) ~= "string" or not string.find(line.Cue, "/VO/") then
-        DebugPrint({Text = "not a voiceline id"})
+        DebugPrint({Text = "not a voiceline id (error)"})
         return base(screen, source, line, parentLine)
     end
 
-    DebugPrint({Text = "Original line " .. line.Cue .. ": " .. line.Text})
+    DebugPrint({Text = "Original line " .. line.Cue .. "(info): " .. line.Text})
 
     local getid = AllDialogue.FromID(line.Cue)
     local key = getid["key"]
@@ -232,7 +232,7 @@ local DisplayTextLine_w = function(base, screen, source, line, parentLine)
         return base(screen, source, line, parentLine)
     end
 
-    if id == nil then
+    if id == "" then
         if line.Cue ~= "/VO/CerberusWhineSad" then
             DebugPrint({Text = "Could not find id in Cue. Given Cue is not known to have no id. Using base-game dialogue for this voiceline instead. (error)"})
 
@@ -240,20 +240,18 @@ local DisplayTextLine_w = function(base, screen, source, line, parentLine)
         end
 
         DebugPrint({Text = "Key " .. key .. " does not have an id associated. (warning)"})
-        id = ""
         relation = ""
     end
 
-    if relation == nil then
-        DebugPrint({Text = "no relation"})
-        relation = ""
+    if relation == "" then
+        DebugPrint({Text = "no relation (warning)"})
     end
 
-    DebugPrint({Text = "Parsed: key='" .. key .. "' id='" .. id .. "' relation='" .. relation .. "'"})
+    DebugPrint({Text = "Parsed (info): key='" .. key .. "' id='" .. id .. "' relation='" .. relation .. "'"})
 
     if vlt[key] == nil or vlt[key][id .. relation] == nil then
         vlt = AllDialogue.VoiceLines
-        DebugPrint({Text = "Falling back to VoiceLines. Has key: " .. tostring(vlt[key] ~= nil)})
+        DebugPrint({Text = "Falling back to VoiceLines. (error) Has key: " .. tostring(vlt[key] ~= nil)})
     end
 
     if vlt[key] == nil then
@@ -267,14 +265,13 @@ local DisplayTextLine_w = function(base, screen, source, line, parentLine)
     end
 
     nl.Text = vlt[key][id .. relation]
-    DebugPrint({Text = "Successfully used new voiceline."})
+    DebugPrint({Text = "Successfully used new voiceline. (info)"})
 
     return base(screen, source, nl, parentLine)
 end
 
 ---@type fun(base: function, id: table): string
 local GetDisplayName_w = function(base, id)
-
     --[=[
     local parts = AllDialogue.FromID(id)
 
@@ -291,7 +288,7 @@ local GetDisplayName_w = function(base, id)
         end
     end
 
-    DebugPrint({Text = id .. " not found"})
+    DebugPrint({Text = id .. " not found (error)"})
     ]=]
     return base(id)
 end
