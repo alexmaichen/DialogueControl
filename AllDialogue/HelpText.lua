@@ -12560,7 +12560,7 @@ AllDialogue.TextLines["OemCloseBrackets"] = {
 
 AllDialogue.TextLines["OemComma"] = {
     [""] = {
-        ["DisplayName"] = ]=],]=],
+        ["DisplayName"] = [=[,]=],
     },
 }
 
